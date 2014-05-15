@@ -40,7 +40,7 @@
                                 for(var stepsCount=0; stepsCount< stepsLength; ++stepsCount){
                                     var step = scenario.steps[stepsCount];
 
-                                    if(step.result === undefined || step.result.status === "failed"){
+                                    if(step.result !== undefined && step.result.status === "failed"){
                                         allStepsPass = false;
                                         break;
                                     }
